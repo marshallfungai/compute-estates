@@ -1,0 +1,40 @@
+.sliderContainer :global(.slick-slide) {
+  transition: all 0.3s ease;
+  transform: scale(0.8);
+}
+
+.sliderContainer :global(.slick-center) {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.sliderContainer :global(.slick-dots li button:before) {
+  color: #fff;
+}
+
+.sliderContainer :global(.slick-prev),
+.sliderContainer :global(.slick-next) {
+  z-index: 2;
+}
+
+.sliderContainer :global(.slick-prev) {
+  left: 15px;
+}
+
+.sliderContainer :global(.slick-next) {
+  right: 15px;
+}
+
+.slide {
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .sliderContainer :global(.slick-slide) {
+    transform: scale(0.9);
+  }
+
+  .sliderContainer :global(.slick-center) {
+    transform: scale(1);
+  }
+}
