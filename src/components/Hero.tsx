@@ -9,9 +9,10 @@ export default function Hero() {
         <Image
           src="/images/hero-bg.jpg"  // Replace with your actual background image
           alt="Background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           quality={100}
+          priority
         />
       </div>
       
@@ -32,9 +33,7 @@ export default function Hero() {
             <a href="#contact" className="inline-block bg-white text-custom-dark-green-900 px-6 py-3 rounded-md hover:bg-custom-dark-green-600 hover:text-white transition duration-300">
               Ask us for a proposal
             </a>
-          
           </div>
-        
         </div>
       </div>
     </section>
