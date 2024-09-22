@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,8 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedin, faFacebook, faGithub, faDribbble } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
+  const [isMounted, setIsMounted] = useState(false);
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,13 +65,16 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <textarea
+              {isMounted && (
+                <textarea
                 placeholder="Tell us about your project..."
                 rows={3}
                 className="px-3 py-2 bg-gray-800 text-white rounded"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
+              )}
+          
               <button
                 type="submit"
                 className="bg-custom-dark-green-700 text-white px-4 py-2 rounded hover:bg-custom-dark-green-600 transition duration-300"
