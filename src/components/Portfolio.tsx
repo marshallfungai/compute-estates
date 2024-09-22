@@ -26,7 +26,7 @@ const projects: Project[] = [
     name: "Peakway rent a car",
     description: "Peakway rent a car is website for a car rental company in Cyprus.",
     technologies: ["React", "Node.js", "Tailwind CSS"],
-    githubLink: "https://github.com/marshallfungai/peakway-car-rental",
+    applicationLink: "https://peakway-car-rental.vercel.app/",
     imageSrc: "/images/projects/peakway-rental.jpg",
   },
   {
@@ -40,7 +40,7 @@ const projects: Project[] = [
     name: "Cyprus Hope IVF Agent Website",
     description: "A website for a Cyprus Hope IVF agent that allows users to track their progress and receive support from medical professionals.",
     technologies: ["Next.js", "Tailwind CSS", "react"],
-    githubLink: "https://github.com/marshallfungai/cyprushopeivf",
+    applicationLink: "https://cyprushopeivf.vercel.app/",
     imageSrc: "/images/projects/ivf-website.jpg",
   },
   {
